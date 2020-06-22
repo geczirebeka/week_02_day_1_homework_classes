@@ -27,6 +27,27 @@ class TestSportsTeam < MiniTest::Test
     end
 
 
+    def test_sports_team_add_new_player()
+        sports_team = SportsTeam.new("Edinburgh FC", ["Juan", "George", "Jessica", "Philipa"], "Coach Denis")
+        sports_team.add_new_player("Hijo")
+        assert_equal(["Juan", "George", "Jessica", "Philipa", "Hijo"], sports_team.players())
+    end
+
+    def test_is_player_in_team_true()
+        new_team = SportsTeam.new("Edinburgh FC", ["Juan", "George", "Jessica", "Philipa"], "Coach Denis")
+        player = new_team.is_player_in_team("George")
+        assert_equal(true, player)
+    end
+
+    def test_is_player_in_team_false()
+        new_team = SportsTeam.new("Edinburgh FC", ["Juan", "George", "Jessica", "Philipa"], "Coach Denis")
+        player = new_team.is_player_in_team("Ben")
+        assert_equal(false, player)
+    end
+
+
+
+
 
 
 
