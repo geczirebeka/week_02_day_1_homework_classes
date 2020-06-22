@@ -1,4 +1,4 @@
-class StudentCodeClan
+class StudentClass
 
     def initialize(name, cohort)
         @name = name
@@ -11,6 +11,23 @@ class StudentCodeClan
 
     def cohort
         return @cohort
+    end
+
+    def set_name(name)
+        @name = name
+    end
+
+    def set_cohort(cohort)
+        @cohort = cohort
+    end
+
+    def student_talks()
+        return "I can talk"
+    end
+
+    def say_favourite_language(language)
+        result = "I love" + language
+        return result
     end
 
 
