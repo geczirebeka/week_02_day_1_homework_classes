@@ -35,8 +35,8 @@ class TestStudentClass < MiniTest::Test
 
     def test_student_say_favourite_language()
         student_class = StudentClass.new("Rebeka", "E41")
-        student_class.say_favourite_language()
-        assert_equal("I love Ruby", student_class.say_favourite_language())
+        phrase = student_class.say_favourite_language("Ruby")
+        assert_equal("I love Ruby", phrase)
     end
 
 
